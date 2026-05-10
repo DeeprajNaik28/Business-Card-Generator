@@ -59,7 +59,7 @@ function CardPreview({ formData, cardRef }) {
 
         </div>
 
-        <div className="border-t border-white/30 pt-3 space-y-2 text-sm">
+        <div className="border-t border-white pt-3 space-y-2 text-sm">
 
           <div className="flex items-center gap-2">
             <FaPhone />

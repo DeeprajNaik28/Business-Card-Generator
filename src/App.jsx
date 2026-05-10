@@ -25,8 +25,9 @@ const [formData, setFormData] = useState({
     try {
 
       const canvas = await html2canvas(cardRef.current, {
-        scale: 2
-      })
+  scale: 2,
+  backgroundColor: null
+})
 
       const imgData = canvas.toDataURL("image/png")
 
@@ -51,8 +52,9 @@ const downloadPNG = async () => {
   if (!cardRef.current) return
 
   const canvas = await html2canvas(cardRef.current, {
-    scale: 2
-  })
+  scale: 2,
+  backgroundColor: null
+})
 
   const image = canvas.toDataURL("image/png")
 
@@ -90,14 +92,14 @@ const downloadPNG = async () => {
 
   <button
     onClick={downloadPDF}
-    className="backdrop-blur-lg bg-blue-600/90 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold shadow-md transition duration-300"
+    className="backdrop-blur-lg bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-semibold shadow-md transition duration-300"
   >
     Download PDF
   </button>
 
   <button
     onClick={downloadPNG}
-className="backdrop-blur-lg bg-green-600/90 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold shadow-md transition duration-300"
+className="backdrop-blur-lg bg-green-600 hover:bg-green-700 text-white px-6 py-3 rounded-xl font-semibold shadow-md transition duration-300"
   >
     Download PNG
   </button>
