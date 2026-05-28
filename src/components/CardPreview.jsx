@@ -31,14 +31,22 @@ function CardPreview({ formData, cardRef }) {
 
       <div
         ref={cardRef}
-        className="w-full max-w-[400px] h-[220px] rounded-2xl p-6 text-white flex flex-col justify-between relative overflow-hidden transition duration-300 hover:scale-[1.02] shadow-[0_10px_40px_rgba(0,0,0,0.25)]"
+        className="w-full max-w-[400px] h-[220px] rounded-2xl p-6 text-white flex flex-col justify-between relative overflow-hidden transition-all duration-300 ease-in-out hover:scale-[1.03] hover:-translate-y-1 shadow-[0_10px_40px_rgba(0,0,0,0.25)]"
         style={cardStyle}
       >
 
-        <div className="flex justify-between items-start">
+        {/* Decorative Circles */}
+
+        <div className="absolute -top-10 -right-10 w-40 h-40 bg-white/10 rounded-full"></div>
+
+        <div className="absolute -bottom-16 -left-10 w-32 h-32 bg-white/10 rounded-full"></div>
+
+        {/* Top Section */}
+
+        <div className="flex justify-between items-start relative z-10">
 
           <div>
-            <h1 className="text-3xl font-bold tracking-wide">
+            <h1 className="text-3xl font-bold tracking-wide leading-tight">
               {formData.name || "Your Name"}
             </h1>
 
@@ -59,7 +67,9 @@ function CardPreview({ formData, cardRef }) {
 
         </div>
 
-        <div className="border-t border-white pt-3 space-y-2 text-sm">
+        {/* Bottom Section */}
+
+        <div className="border-t border-white pt-3 space-y-2 text-sm relative z-10">
 
           <div className="flex items-center gap-2">
             <FaPhone />
@@ -73,7 +83,17 @@ function CardPreview({ formData, cardRef }) {
 
           <div className="flex items-center gap-2">
             <FaBuilding />
-            <p>{formData.company || "Company Name"}</p>
+
+            <div>
+              <p className="text-xs opacity-70 uppercase">
+                Company
+              </p>
+
+              <p>
+                {formData.company || "Company Name"}
+              </p>
+            </div>
+
           </div>
 
         </div>
