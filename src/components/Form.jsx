@@ -84,6 +84,11 @@ const handleChange = (e) => {
   <option value="blue">Blue Professional</option>
   <option value="dark">Dark Elegant</option>
   <option value="green">Green Modern</option>
+  <option value="orange">Sunset Orange</option>
+  <option value="purple">Royal Purple</option>
+  <option value="red">Crimson Red</option>
+  <option value="cyan">Ocean Cyan</option>
+  <option value="navy">Midnight Navy</option>
 </select>
 
 

@@ -26,6 +26,36 @@ function CardPreview({ formData, cardRef }) {
     }
   }
 
+if (formData.theme === "orange") {
+  cardStyle = {
+    background: "linear-gradient(to right, #f97316, #ea580c)"
+  }
+}
+
+if (formData.theme === "purple") {
+  cardStyle = {
+    background: "linear-gradient(to right, #7c3aed, #5b21b6)"
+  }
+}
+
+if (formData.theme === "red") {
+  cardStyle = {
+    background: "linear-gradient(to right, #dc2626, #991b1b)"
+  }
+}
+
+if (formData.theme === "cyan") {
+  cardStyle = {
+    background: "linear-gradient(to right, #06b6d4, #0e7490)"
+  }
+}
+
+if (formData.theme === "navy") {
+  cardStyle = {
+    background: "linear-gradient(to right, #1e3a8a, #172554)"
+  }
+}
+
   return (
     <div className="w-full flex justify-center">
 
